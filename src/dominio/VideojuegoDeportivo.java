@@ -1,0 +1,19 @@
+package dominio;
+
+public class VideojuegoDeportivo extends Videojuegos {
+    private String deporte;
+
+    public VideojuegoDeportivo(String titulo, String plataforma, int puntuacion,
+                               int horasJugadas, String deporte) {
+        super(titulo, plataforma, puntuacion, horasJugadas);
+        this.deporte = deporte;
+    }
+
+    public String getDeporte() { return deporte; }
+
+    // Ampliación: descripcion() específico
+    @Override
+    public String descripcion() {
+        return super.descripcion() + " - Deporte: " + deporte;
+    }
+}

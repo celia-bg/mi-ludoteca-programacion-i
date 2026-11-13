@@ -15,6 +15,10 @@ public class Videojuegos{
 
     }
 
+    public Videojuegos(String titulo, String plataforma) {
+        this(titulo, plataforma, 0, 0);
+    }
+
     public String getTitulo() {
         return titulo;
     }
@@ -63,9 +67,30 @@ public class Videojuegos{
         return 0;
     }
     
-    @Override 
+    public String descripcion() {
+        return toString();
+    }
+
+    @Override
     public String toString() {
         return titulo +  "(" + plataforma + ") - Puntuación: " + puntuacion
                 + " - Horas: " + horasJugadas;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+    if (this == obj) {
+        return true;
+    }
+    if (obj == null || getClass() != obj.getClass()) {
+        return false;
+    }
+    Videojuegos otro = (Videojuegos) obj;
+    return this.titulo.equals(otro.titulo);
+}
+
+@Override
+public int hashCode() {
+    return titulo.hashCode();
+}
 }
