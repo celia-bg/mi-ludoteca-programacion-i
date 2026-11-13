@@ -1,14 +1,13 @@
 package presentacion;
 
-import dominio.Ludoteca;
-import dominio.Videojuegos;
+import dominio.*;
 
 public class Main {
     public static void main(String[] args) {
         Ludoteca ludoteca = new Ludoteca();
-        Videojuegos v1 = new Videojuegos("Hollow Knight", "PC", 95, 40);
+        Videojuegos v1 = new Videojuegos("Hollow Knight", "PC", 95, 80);
         Videojuegos v2 = new Videojuegos("Blasphemous", "Switch", 94, 25);
-        Videojuegos v3 = new Videojuegos("God of War", "PS4", 85, 30);
+        Videojuegos v3 = new Videojuegos("God of War", "PS4", 85, 72);
 
         ludoteca.agregar(v1);
         ludoteca.agregar(v2);
@@ -27,3 +26,5 @@ public class Main {
         System.out.print(new Ludoteca());
     }
 }
+
+
