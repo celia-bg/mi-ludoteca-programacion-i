@@ -11,7 +11,6 @@ public class VideojuegoDeportivo extends Videojuegos {
 
     public String getDeporte() { return deporte; }
 
-    // Ampliación: descripcion() específico
     @Override
     public String descripcion() {
         return super.descripcion() + " - Deporte: " + deporte;
