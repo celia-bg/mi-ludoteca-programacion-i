@@ -1,6 +1,6 @@
 package dominio;
 
-public class VideojuegoOnline extends Videojuegos {
+public class VideojuegoOnline extends Videojuego {
     private int numeroJugadores;
 
     public VideojuegoOnline(String titulo, String plataforma, int puntuacion,

@@ -1,6 +1,6 @@
 package dominio;
 
-public class VideojuegoEstrategia extends Videojuegos {
+public class VideojuegoEstrategia extends Videojuego {
     private String tipoEstrategia;
 
     public VideojuegoEstrategia(String titulo, String plataforma, int puntuacion,

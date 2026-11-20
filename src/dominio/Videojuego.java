@@ -1,13 +1,13 @@
 package dominio;
 
-public class Videojuegos{
+public class Videojuego{
     
     private String titulo;
     private String plataforma;
     private int puntuacion;
     private int horasJugadas;
 
-    public Videojuegos(String titulo, String plataforma, int puntuacion, int horasJugadas) {
+    public Videojuego(String titulo, String plataforma, int puntuacion, int horasJugadas) {
          setTitulo(titulo);
          setPlataforma(plataforma);
          setPuntuacion(puntuacion);
@@ -15,7 +15,7 @@ public class Videojuegos{
 
     }
 
-    public Videojuegos(String titulo, String plataforma) {
+    public Videojuego(String titulo, String plataforma) {
         this(titulo, plataforma, 0, 0);
     }
 
@@ -71,6 +71,10 @@ public class Videojuegos{
         return toString();
     }
 
+    public void mostrarFicha() {
+        System.out.println(descripcion());
+    }
+
     @Override
     public String toString() {
         return titulo +  "(" + plataforma + ") - Puntuación: " + puntuacion
@@ -85,7 +89,7 @@ public class Videojuegos{
     if (obj == null || getClass() != obj.getClass()) {
         return false;
     }
-    Videojuegos otro = (Videojuegos) obj;
+    Videojuego otro = (Videojuego) obj;
     return this.titulo.equals(otro.titulo);
 }
 
